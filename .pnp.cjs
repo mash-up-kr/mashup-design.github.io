@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@yarnpkg/sdks", "npm:2.6.3"],\
+            ["dotenv", "npm:16.0.2"],\
             ["gatsby", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
             ["gatsby-plugin-emotion", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:7.21.0"],\
             ["gatsby-plugin-image", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:2.21.0"],\
@@ -9969,6 +9970,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["dotenv", [\
+        ["npm:16.0.2", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.2-80af4821b1-ca8f9ca2d6.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:7.0.0", {\
           "packageLocation": "./.yarn/cache/dotenv-npm-7.0.0-9fbf3b4fd8-18a7b3ef0e.zip/node_modules/dotenv/",\
           "packageDependencies": [\
@@ -15303,6 +15311,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@yarnpkg/sdks", "npm:2.6.3"],\
+            ["dotenv", "npm:16.0.2"],\
             ["gatsby", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
             ["gatsby-plugin-emotion", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:7.21.0"],\
             ["gatsby-plugin-image", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:2.21.0"],\
