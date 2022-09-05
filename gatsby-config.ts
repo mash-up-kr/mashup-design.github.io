@@ -1,20 +1,23 @@
 import type { GatsbyConfig } from 'gatsby';
+import env from 'dotenv';
+import path from 'path';
+
+env.config({ path: path.join(__dirname, '.env') });
+
+const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env;
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `mashup-design.github.io`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: '',
-        spaceId: '',
+        spaceId: CONTENTFUL_SPACE_ID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
       },
     },
     'gatsby-plugin-emotion',
