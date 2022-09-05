@@ -50,6 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-source-filesystem", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
             ["gatsby-transformer-remark", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:5.21.0"],\
             ["gatsby-transformer-sharp", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
+            ["prettier", "npm:2.7.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:18.2.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
@@ -15322,6 +15323,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-source-filesystem", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
             ["gatsby-transformer-remark", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:5.21.0"],\
             ["gatsby-transformer-sharp", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
+            ["prettier", "npm:2.7.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:18.2.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
@@ -18161,6 +18163,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prepend-http-npm-2.0.0-e1fc4332f2-7694a95254.zip/node_modules/prepend-http/",\
           "packageDependencies": [\
             ["prepend-http", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["prettier", [\
+        ["npm:2.7.1", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.7.1-d1f40f5e1a-55a4409182.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.7.1"]\
           ],\
           "linkType": "HARD"\
         }]\
