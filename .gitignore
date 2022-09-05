@@ -12,3 +12,4 @@ src/gatsby-types.d.ts
 !.yarn/versions
 
 .env*
+!.env.sample
