@@ -149,7 +149,7 @@ const IndexPage = () => {
         real-time. 😎
       </p>
       <ul style={doclistStyles}>
-        {docLinks.map(doc => (
+        {docLinks.map((doc) => (
           <li key={doc.url} style={docLinkStyle}>
             <a
               style={linkStyle}
@@ -161,7 +161,7 @@ const IndexPage = () => {
         ))}
       </ul>
       <ul style={listStyles}>
-        {links.map(link => (
+        {links.map((link) => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
