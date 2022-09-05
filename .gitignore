@@ -11,5 +11,7 @@ src/gatsby-types.d.ts
 !.yarn/sdks
 !.yarn/versions
 
+.eslintcache
+
 .env*
 !.env.sample
