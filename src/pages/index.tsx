@@ -1,8 +1,13 @@
 import React from 'react';
 import type { HeadFC } from 'gatsby';
+import Layout from '@/components/common/Layout/Layout';
 
 const IndexPage = () => {
-  return <main>Home Page</main>;
+  return (
+    <Layout>
+      <main>Home Page</main>
+    </Layout>
+  );
 };
 
 export default IndexPage;
