@@ -14,6 +14,14 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: CONTENTFUL_SPACE_ID,
