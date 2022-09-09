@@ -19,4 +19,4 @@ export const colors = {
   },
 } as const;
 
-export type ColorsType = typeof colors;
+export type ColorsTheme = typeof colors;

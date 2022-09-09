@@ -1,12 +1,12 @@
 import '@emotion/react';
-import { ColorsType } from '@/styles/themes/colors';
-import { FontsType } from '@/styles/themes/fonts';
+import { ColorsTheme } from '@/styles/themes/colors';
+import { FontsTheme } from '@/styles/themes/fonts';
 import { BreakPointTheme } from '@/styles/themes/breakPoint';
 
 declare module '@emotion/react' {
   export interface Theme {
-    colors: ColorsType;
-    fonts: FontsType;
+    colors: ColorsTheme;
+    fonts: FontsTheme;
     breakPoint: BreakPointTheme;
   }
 }

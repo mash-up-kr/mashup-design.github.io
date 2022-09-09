@@ -122,4 +122,4 @@ export const fonts = {
   `,
 } as const;
 
-export type FontsType = typeof fonts;
+export type FontsTheme = typeof fonts;
