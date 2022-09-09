@@ -3,7 +3,11 @@ import styled from '@emotion/styled';
 import MashUpPdSvg from '@/assets/svg/mashup-pd.svg';
 import { Link } from 'gatsby';
 
-export const GlobalNavigationBar = styled.nav`
+interface GlobalNavigationBarProps {
+  isHamburgerMenuOpen: boolean;
+}
+
+export const GlobalNavigationBar = styled.nav<GlobalNavigationBarProps>`
   ${({ theme }) => css`
     position: fixed;
     top: 0;
@@ -18,10 +22,6 @@ export const GlobalNavigationBar = styled.nav`
     width: 100%;
     max-width: 120rem;
     z-index: ${theme.zIndex.gnb};
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      height: 6.4rem;
-    }
   `}
 `;
 
@@ -54,8 +54,22 @@ export const HeadingText = styled.h1`
 `;
 
 export const LinkMenuList = styled.ul`
-  display: flex;
-  flex-flow: row nowrap;
+  ${({ theme }) => css`
+    display: flex;
+    flex-flow: row nowrap;
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      position: absolute;
+      top: 6.4rem;
+      left: 0;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: ${theme.colors.light.white};
+    }
+  `}
 `;
 
 export const Menu = styled.li`
@@ -67,7 +81,12 @@ export const Menu = styled.li`
     }
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
-      display: none;
+      margin-top: 4rem;
+      margin-right: 0;
+
+      :first-of-type {
+        margin-top: 0;
+      }
     }
   `}
 `;
@@ -88,32 +107,44 @@ export const MenuLink = styled(Link)<MenuLinkProps>`
     }
 
     :active {
+      // TODO: border 위치 디자인 시안과 일치
       border-bottom: 0.8rem solid ${activeBorderColor};
+    }
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      ${theme.fonts.bold20};
     }
   `}
 `;
 
-export const HamburgerMenu = styled.button`
+export const HamburgerMenuToggleButton = styled.button`
   ${({ theme }) => css`
     display: none;
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
-      display: flex;
-      flex-flow: column;
-      justify-content: space-between;
-      padding: 0.6rem 0.5rem;
+      display: block;
       background: transparent;
+      cursor: pointer;
+    }
+  `}
+`;
 
-      & div {
-        width: 1.4rem;
-        height: 0.2rem;
-        border-radius: 0.2rem;
-        background: ${theme.colors.light.black};
+export const Hamburger = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 0.6rem 0.5rem;
 
-        :nth-of-type(2) {
-          margin: 0.3rem 0;
-          width: 1.2rem;
-        }
+    & div {
+      width: 1.4rem;
+      height: 0.2rem;
+      border-radius: 0.2rem;
+      background: ${theme.colors.light.black};
+
+      :nth-of-type(2) {
+        margin: 0.3rem 0;
+        width: 1.2rem;
       }
     }
   `}
