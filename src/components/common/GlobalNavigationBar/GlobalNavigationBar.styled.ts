@@ -81,7 +81,7 @@ export const Menu = styled.li`
     }
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
-      margin-top: 4rem;
+      margin-top: 4.8rem;
       margin-right: 0;
 
       :first-of-type {
@@ -107,12 +107,15 @@ export const MenuLink = styled(Link)<MenuLinkProps>`
     }
 
     :active {
-      // TODO: border 위치 디자인 시안과 일치
       border-bottom: 0.8rem solid ${activeBorderColor};
     }
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       ${theme.fonts.bold20};
+      padding-bottom: 0;
+      :active {
+        border-bottom: 1rem solid ${activeBorderColor};
+      }
     }
   `}
 `;
