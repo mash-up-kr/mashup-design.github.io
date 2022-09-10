@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@emotion/react", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:11.10.0"],\
             ["@emotion/styled", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:11.10.0"],\
+            ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:17.0.45"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
@@ -64,6 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-transformer-sharp", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
             ["husky", "npm:8.0.1"],\
             ["lint-staged", "npm:13.0.3"],\
+            ["lodash-es", "npm:4.17.21"],\
             ["prettier", "npm:2.7.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:18.2.0"],\
@@ -6167,6 +6169,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.183-f304710022-9c754dc7a2.zip/node_modules/@types/lodash/",\
           "packageDependencies": [\
             ["@types/lodash", "npm:4.14.183"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.14.184", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.184-aec91d64ae-6d9a4d67f7.zip/node_modules/@types/lodash/",\
+          "packageDependencies": [\
+            ["@types/lodash", "npm:4.14.184"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/lodash-es", [\
+        ["npm:4.17.6", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-es-npm-4.17.6-fd5abbdc74-9bd239dd52.zip/node_modules/@types/lodash-es/",\
+          "packageDependencies": [\
+            ["@types/lodash-es", "npm:4.17.6"],\
+            ["@types/lodash", "npm:4.14.184"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15942,6 +15961,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["lodash-es", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-05cbffad6e.zip/node_modules/lodash-es/",\
+          "packageDependencies": [\
+            ["lodash-es", "npm:4.17.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["lodash.clonedeep", [\
         ["npm:4.5.0", {\
           "packageLocation": "./.yarn/cache/lodash.clonedeep-npm-4.5.0-fbc3cda4e5-92c46f094b.zip/node_modules/lodash.clonedeep/",\
@@ -16288,6 +16316,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mashup-design.github.io", "workspace:."],\
             ["@emotion/react", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:11.10.0"],\
             ["@emotion/styled", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:11.10.0"],\
+            ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:17.0.45"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
@@ -16317,6 +16346,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-transformer-sharp", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:4.21.0"],\
             ["husky", "npm:8.0.1"],\
             ["lint-staged", "npm:13.0.3"],\
+            ["lodash-es", "npm:4.17.21"],\
             ["prettier", "npm:2.7.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:2366527d9480b565985c1ffcc159be9920cb877747c32ca4169e8a4d9486b5007bb99c3602cf79961eb98c81ecbd496d880c901e749b34a138fe1a2c0f787c33#npm:18.2.0"],\
