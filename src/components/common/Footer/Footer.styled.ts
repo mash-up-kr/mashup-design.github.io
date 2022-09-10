@@ -36,7 +36,7 @@ export const FlexRowAlignCenter = styled.div`
 
 export const CopyRight = styled.small`
   ${({ theme }) => css`
-    ${theme.fonts.regular16}
+    ${theme.fonts.medium16}
     display: block;
     margin-top: 0.4rem;
     color: ${theme.colors.light.gray300};
