@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 
 export const Footer = styled.div`
   ${({ theme }) => css`
+    position: absolute;
+    left: 0;
+    bottom: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -12,6 +15,7 @@ export const Footer = styled.div`
     width: 100%;
     max-width: 120rem;
     background: ${theme.colors.light.white};
+    border-top: 0.1rem solid ${theme.colors.light.gray100};
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       flex-flow: column nowrap;
