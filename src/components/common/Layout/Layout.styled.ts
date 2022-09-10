@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 export const Layout = styled.div`
   ${({ theme }) => css`
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     margin: 0 auto;
