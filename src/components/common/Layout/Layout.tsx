@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <ThemeProvider theme={themes}>
       <Styled.Layout>
         <GlobalNavigationBar />
-        <Styled.Main>{children}</Styled.Main>
+        <Styled.ContentsSection>{children}</Styled.ContentsSection>
         <Footer />
       </Styled.Layout>
     </ThemeProvider>

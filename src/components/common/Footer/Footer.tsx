@@ -7,14 +7,18 @@ import Youtube from '@/assets/svg/youtube.svg';
 import * as Styled from './Footer.styled';
 
 const platformLinks = [
-  { PlatformLogo: Behance, link: 'https://www.behance.net/Mash-Up', title: '' },
-  { PlatformLogo: Github, link: 'https://github.com/mash-up-kr', title: '' },
-  { PlatformLogo: Tistory, link: 'https://mash-up.tistory.com' },
-  { PlatformLogo: Instagram, link: 'https://www.instagram.com/official_mashup_', title: '' },
+  { PlatformLogo: Behance, link: 'https://www.behance.net/Mash-Up', title: 'Behance' },
+  { PlatformLogo: Github, link: 'https://github.com/mash-up-kr', title: 'Github' },
+  { PlatformLogo: Tistory, link: 'https://mash-up.tistory.com', title: 'Tistory' },
+  {
+    PlatformLogo: Instagram,
+    link: 'https://www.instagram.com/official_mashup_',
+    title: 'Instagram',
+  },
   {
     PlatformLogo: Youtube,
     link: 'https://www.youtube.com/channel/UCgA6oOBvVdEjVfqEUEw5BnA',
-    title: '',
+    title: 'Youtube',
   },
 ];
 
@@ -29,8 +33,14 @@ const Footer = () => {
         <Styled.CopyRight>©Mash-Up.2022 All rights reserved</Styled.CopyRight>
       </div>
       <div>
-        {platformLinks.map(({ PlatformLogo, link }) => (
-          <Styled.PlatformLink href={link} target="_blank" rel="noreferrer">
+        {platformLinks.map(({ PlatformLogo, link, title }) => (
+          <Styled.PlatformLink
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            title={title}
+            key={title}
+          >
             <PlatformLogo />
           </Styled.PlatformLink>
         ))}
