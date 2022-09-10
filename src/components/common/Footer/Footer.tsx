@@ -25,26 +25,28 @@ const platformLinks = [
 const Footer = () => {
   return (
     <Styled.Footer>
-      <div>
-        <Styled.FlexRowAlignCenter>
-          <MashUpLogo />
-          <Styled.LogoTitle>Mash Up</Styled.LogoTitle>
-        </Styled.FlexRowAlignCenter>
-        <Styled.CopyRight>©Mash-Up.2022 All rights reserved</Styled.CopyRight>
-      </div>
-      <div>
-        {platformLinks.map(({ PlatformLogo, link, title }) => (
-          <Styled.PlatformLink
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-            title={title}
-            key={title}
-          >
-            <PlatformLogo />
-          </Styled.PlatformLink>
-        ))}
-      </div>
+      <Styled.FooterInner>
+        <div>
+          <Styled.FlexRowAlignCenter>
+            <MashUpLogo />
+            <Styled.LogoTitle>Mash Up</Styled.LogoTitle>
+          </Styled.FlexRowAlignCenter>
+          <Styled.CopyRight>©Mash-Up.2022 All rights reserved</Styled.CopyRight>
+        </div>
+        <div>
+          {platformLinks.map(({ PlatformLogo, link, title }) => (
+            <Styled.PlatformLink
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              title={title}
+              key={title}
+            >
+              <PlatformLogo />
+            </Styled.PlatformLink>
+          ))}
+        </div>
+      </Styled.FooterInner>
     </Styled.Footer>
   );
 };

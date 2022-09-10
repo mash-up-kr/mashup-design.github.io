@@ -11,11 +11,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <ThemeProvider theme={themes}>
+      <GlobalNavigationBar />
       <Styled.Layout>
-        <GlobalNavigationBar />
         <Styled.ContentsSection>{children}</Styled.ContentsSection>
-        <Footer />
       </Styled.Layout>
+      <Footer />
     </ThemeProvider>
   );
 };

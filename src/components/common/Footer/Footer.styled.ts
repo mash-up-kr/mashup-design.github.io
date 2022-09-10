@@ -1,21 +1,24 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
   ${({ theme }) => css`
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    width: 100vw;
+    background: ${theme.colors.light.white};
+    border-top: 0.1rem solid ${theme.colors.light.gray100};
+  `}
+`;
+
+export const FooterInner = styled.div`
+  ${({ theme }) => css`
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
+    margin: 0 auto;
     padding: 0 6rem;
-    height: 20rem;
-    width: 100%;
+    align-items: center;
     max-width: 120rem;
-    background: ${theme.colors.light.white};
-    border-top: 0.1rem solid ${theme.colors.light.gray100};
+    height: 20rem;
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       flex-flow: column nowrap;
