@@ -2,9 +2,9 @@ import ArrowUpside from '@/assets/svg/arrow-upside.svg';
 import * as Styled from './Header.styled';
 
 const externalLinkList = [
-  { title: 'Behance', link: '' },
-  { title: 'Instagram', link: '' },
-  { title: 'Mail', link: '' },
+  { title: 'Behance', link: 'https://www.behance.net/Mash-Up' },
+  { title: 'Instagram', link: 'https://www.instagram.com/official_mashup_' },
+  { title: 'Mail', link: 'mailto:recruit.mashup@gmail.com' },
 ];
 
 const Header = () => {
