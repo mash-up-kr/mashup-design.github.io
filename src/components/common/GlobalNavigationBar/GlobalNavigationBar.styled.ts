@@ -3,11 +3,7 @@ import styled from '@emotion/styled';
 import MashUpPdSvg from '@/assets/svg/mashup-pd.svg';
 import { Link } from 'gatsby';
 
-interface GlobalNavigationBarProps {
-  isHamburgerMenuOpen: boolean;
-}
-
-export const GlobalNavigationBar = styled.nav<GlobalNavigationBarProps>`
+export const GlobalNavigationBar = styled.nav`
   ${({ theme }) => css`
     position: fixed;
     top: 0;
@@ -49,73 +45,6 @@ export const HeadingText = styled.h1`
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       ${theme.a11y.visuallyHidden};
-    }
-  `}
-`;
-
-export const LinkMenuList = styled.ul`
-  ${({ theme }) => css`
-    display: flex;
-    flex-flow: row nowrap;
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      position: absolute;
-      top: 6.4rem;
-      left: 0;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      height: 100vh;
-      background: ${theme.colors.light.white};
-    }
-  `}
-`;
-
-export const Menu = styled.li`
-  ${({ theme }) => css`
-    margin-right: 2rem;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      margin-top: 4.8rem;
-      margin-right: 0;
-
-      :first-of-type {
-        margin-top: 0;
-      }
-    }
-  `}
-`;
-
-interface MenuLinkProps {
-  hoverColor: string;
-  activeBorderColor: string;
-}
-
-export const MenuLink = styled(Link)<MenuLinkProps>`
-  ${({ theme, activeBorderColor, hoverColor }) => css`
-    ${theme.fonts.bold14};
-    padding: 0.8rem;
-    color: ${theme.colors.light.gray400};
-
-    :hover {
-      color: ${hoverColor};
-    }
-
-    :active {
-      border-bottom: 0.8rem solid ${activeBorderColor};
-    }
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      ${theme.fonts.bold20};
-      padding-bottom: 0;
-      :active {
-        border-bottom: 1rem solid ${activeBorderColor};
-      }
     }
   `}
 `;

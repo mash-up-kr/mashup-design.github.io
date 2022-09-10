@@ -7,7 +7,6 @@ export const Layout = styled.div`
     padding: 8rem 2.4rem 0;
     width: 100%;
     max-width: 120rem;
-    height: 8rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
     }
