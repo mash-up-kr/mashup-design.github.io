@@ -113,6 +113,13 @@ export const fonts = {
     line-height: 1.6;
     letter-spacing: -0.01em;
   `,
+  regular16: css`
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: Pretendard;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+  `,
   regular14: css`
     font-weight: 400;
     font-size: 1.4rem;
