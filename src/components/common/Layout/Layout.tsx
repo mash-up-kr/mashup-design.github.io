@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { ThemeProvider } from '@emotion/react';
 import themes from '@/styles/themes';
-import { GlobalNavigationBar } from '@/components';
+import { GlobalNavigationBar, Footer } from '@/components';
 import * as Styled from './Layout.styled';
 
 interface LayoutProps {
@@ -13,7 +13,8 @@ const Layout = ({ children }: LayoutProps) => {
     <ThemeProvider theme={themes}>
       <Styled.Layout>
         <GlobalNavigationBar />
-        {children}
+        <Styled.Main>{children}</Styled.Main>
+        <Footer />
       </Styled.Layout>
     </ThemeProvider>
   );
