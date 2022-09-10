@@ -53,6 +53,7 @@ export const MenuLink = styled(Link)<MenuLinkProps>`
     ${theme.fonts.bold14};
     padding: 0.8rem;
     color: ${theme.colors.light.gray400};
+    padding-bottom: 0;
 
     :hover {
       color: ${hover_color};
@@ -64,7 +65,6 @@ export const MenuLink = styled(Link)<MenuLinkProps>`
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       ${theme.fonts.bold20};
-      padding-bottom: 0;
       :active {
         border-bottom: 1rem solid ${active_border_color};
       }
