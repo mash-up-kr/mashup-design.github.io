@@ -85,6 +85,7 @@ export const Description = styled.span`
 
 export const TagList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   gap: 1.2rem;
   order: 1;
 `;
