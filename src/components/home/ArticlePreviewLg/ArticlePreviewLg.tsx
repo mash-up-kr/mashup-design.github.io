@@ -1,15 +1,15 @@
-import { ArticleType } from '../ArticlePreview/ArticlePreview';
-import * as Styled from './ArticlePreviewMd..styled';
+import { ArticleType } from '@/components/common/ArticlePreviewMd/ArticlePreview';
+import * as Styled from './ArticlePreviewLg.styled';
 
-interface ArticlePreviewMdProps {
+interface ArticlePreviewLgProps {
   article: ArticleType;
 }
 
-const ArticlePreviewMd = ({ article }: ArticlePreviewMdProps) => {
-  const { categories, createdAt, slug, thumbnail, title } = article;
+const ArticlePreviewLg = ({ article }: ArticlePreviewLgProps) => {
+  const { categories, createdAt, description, slug, thumbnail, title } = article;
 
   return (
-    <Styled.ArticlePreviewMd>
+    <Styled.ArticlePreviewLg>
       <Styled.ArticleDetailLink to={slug}>
         <Styled.ContentWrapper>
           <Styled.Heading>{title}</Styled.Heading>
@@ -19,12 +19,13 @@ const ArticlePreviewMd = ({ article }: ArticlePreviewMdProps) => {
               <Styled.Tag key={category}>{category}</Styled.Tag>
             ))}
           </Styled.TagList>
+          <Styled.Description>{description}</Styled.Description>
           <Styled.CreateAt>{createdAt}</Styled.CreateAt>
         </Styled.ContentWrapper>
         <Styled.Thumbnail image={thumbnail.gatsbyImageData} alt="" />
       </Styled.ArticleDetailLink>
-    </Styled.ArticlePreviewMd>
+    </Styled.ArticlePreviewLg>
   );
 };
 
-export default ArticlePreviewMd;
+export default ArticlePreviewLg;

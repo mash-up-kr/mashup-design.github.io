@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-export const ArticlePreviewMd = styled.article`
+export const ArticlePreview = styled.article`
   box-shadow: 0rem 0.4rem 1.2rem rgba(46, 44, 44, 0.25);
   border-radius: 1.6rem;
 `;

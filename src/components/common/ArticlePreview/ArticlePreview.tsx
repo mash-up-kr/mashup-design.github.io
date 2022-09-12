@@ -1,5 +1,5 @@
-import { ArticlePreviewLg, ArticlePreviewMd } from '@/components';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
+import * as Styled from './ArticlePreview..styled';
 
 export interface ArticleType {
   title: string;
@@ -10,17 +10,30 @@ export interface ArticleType {
   createdAt: string;
 }
 
-interface ArticlePreviewProps {
+interface ArticlePreviewMdProps {
   article: ArticleType;
-  size: 'lg' | 'md';
 }
 
-const ArticlePreview = ({ article, size }: ArticlePreviewProps) => {
-  if (!size) return null;
+const ArticlePreview = ({ article }: ArticlePreviewMdProps) => {
+  const { categories, createdAt, slug, thumbnail, title } = article;
 
-  if (size === 'lg') return <ArticlePreviewLg article={article} />;
-
-  return <ArticlePreviewMd article={article} />;
+  return (
+    <Styled.ArticlePreview>
+      <Styled.ArticleDetailLink to={slug}>
+        <Styled.ContentWrapper>
+          <Styled.Heading>{title}</Styled.Heading>
+          <Styled.TagList>
+            <Styled.Latest>최신</Styled.Latest>
+            {categories.map((category) => (
+              <Styled.Tag key={category}>{category}</Styled.Tag>
+            ))}
+          </Styled.TagList>
+          <Styled.CreateAt>{createdAt}</Styled.CreateAt>
+        </Styled.ContentWrapper>
+        <Styled.Thumbnail image={thumbnail.gatsbyImageData} alt="" />
+      </Styled.ArticleDetailLink>
+    </Styled.ArticlePreview>
+  );
 };
 
 export default ArticlePreview;
