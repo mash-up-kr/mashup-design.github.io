@@ -1,5 +1,6 @@
 import { ArticlePreview } from '@/components';
 import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
+import { useDetectViewport } from '@/hooks';
 import * as Styled from './ArticleSection.styled';
 
 interface ArticleSectionProps {
@@ -9,9 +10,14 @@ interface ArticleSectionProps {
 }
 
 const ArticleSection = ({ allContentfulArticles }: ArticleSectionProps) => {
+  const { viewportSize } = useDetectViewport();
   return (
     <Styled.ArticleSection>
-      <ArticlePreview article={allContentfulArticles.nodes[0]} />
+      {viewportSize !== 'mobile' && (
+        <ArticlePreview article={allContentfulArticles.nodes[0]} size="lg" />
+      )}
+      <ArticlePreview article={allContentfulArticles.nodes[0]} size="md" />
+      <ArticlePreview article={allContentfulArticles.nodes[1]} size="md" />
     </Styled.ArticleSection>
   );
 };
