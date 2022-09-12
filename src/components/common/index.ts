@@ -3,3 +3,4 @@ export { default as LinkMenuList } from './LinkMenuList/LinkMenuList';
 export { default as Footer } from './Footer/Footer';
 export { default as ArticlePreview } from './ArticlePreview/ArticlePreview';
 export { default as ArticlePreviewLg } from './ArticlePreviewLg/ArticlePreviewLg';
+export { default as ArticlePreviewMd } from './ArticlePreviewMd/ArticlePreviewMd';
