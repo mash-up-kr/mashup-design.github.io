@@ -18,6 +18,10 @@ export const GlobalNavigationBar = styled.nav`
     width: 100%;
     max-width: 120rem;
     z-index: ${theme.zIndex.gnb};
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      height: 6.4rem;
+    }
   `}
 `;
 
