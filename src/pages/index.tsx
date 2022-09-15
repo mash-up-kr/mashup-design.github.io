@@ -34,7 +34,7 @@ export const query = graphql`
         title
         slug
         description
-        categories
+        tag
         thumbnail {
           gatsbyImageData
         }
