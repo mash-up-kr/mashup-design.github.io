@@ -4,7 +4,11 @@ import { HeadFC } from 'gatsby';
 const article = () => {
   return (
     <Layout>
-      <SubHeader title="Design Article" description="매시업 디자인팀의 디자인 고찰 이야기" />
+      <SubHeader
+        title="Design Article"
+        description="매시업 디자인팀의 디자인 고찰 이야기"
+        color="blue"
+      />
     </Layout>
   );
 };

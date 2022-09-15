@@ -1,7 +1,10 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import StarSvg from '@/assets/svg/star.svg';
-import HighlighterSvg from '@/assets/svg/highlighter-yellow-no-shadow.svg';
+import HighlighterYellowSvg from '@/assets/svg/highlighter-yellow-no-shadow.svg';
+import HighlighterBlueSvg from '@/assets/svg/highlighter-blue-no-shadow.svg';
+import HighlighterRedSvg from '@/assets/svg/highlighter-red-no-shadow.svg';
+import { HighlightColor } from './SubHeader';
 
 export const Header = styled.header`
   ${({ theme }) => css`
@@ -58,13 +61,20 @@ export const Heading = styled.h2`
   `}
 `;
 
-export const Underline = styled.div`
-  ${({ theme }) => css`
+const getHighlightColor = (theme: Theme, color: HighlightColor) => {
+  const { blue100, red100, yellow100 } = theme.colors.light;
+  if (color === 'blue') return blue100;
+  if (color === 'red') return red100;
+  return yellow100;
+};
+
+export const Underline = styled.div<{ color: HighlightColor }>`
+  ${({ theme, color }) => css`
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 1.6rem;
-    background: ${theme.colors.light.yellow100};
+    background: ${getHighlightColor(theme, color)};
     z-index: ${theme.zIndex.textBackground};
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
@@ -74,10 +84,14 @@ export const Underline = styled.div`
   `}
 `;
 
-export const Star = styled(StarSvg)`
-  ${({ theme }) => css`
+export const Star = styled(StarSvg)<{ color: HighlightColor }>`
+  ${({ theme, color }) => css`
     width: 3.2rem;
     height: 3.2rem;
+
+    & path {
+      fill: ${getHighlightColor(theme, color)};
+    }
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       width: 2.4rem;
@@ -86,23 +100,43 @@ export const Star = styled(StarSvg)`
   `}
 `;
 
-export const Highlighter = styled(HighlighterSvg)`
+const highlighterStyle = (theme: Theme) => css`
+  filter: drop-shadow(16px 52px 32px rgba(115, 112, 151, 0.16));
+
+  @media (max-width: ${theme.breakPoint.media.tablet}) {
+    width: 11.6rem;
+    height: 8rem;
+  }
+
+  @media (max-width: ${theme.breakPoint.media.mobile}) {
+    order: -1;
+    margin-bottom: 1.6rem;
+    width: 8.8rem;
+    height: 6rem;
+  }
+`;
+
+const HighlighterYellow = styled(HighlighterYellowSvg)`
   ${({ theme }) => css`
-    filter: drop-shadow(16px 52px 32px rgba(115, 112, 151, 0.16));
-
-    @media (max-width: ${theme.breakPoint.media.tablet}) {
-      width: 11.6rem;
-      height: 8rem;
-    }
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      order: -1;
-      margin-bottom: 1.6rem;
-      width: 8.8rem;
-      height: 6rem;
-    }
+    ${highlighterStyle(theme)};
   `}
 `;
+const HighlighterBlue = styled(HighlighterBlueSvg)`
+  ${({ theme }) => css`
+    ${highlighterStyle(theme)};
+  `}
+`;
+const HighlighterRed = styled(HighlighterRedSvg)`
+  ${({ theme }) => css`
+    ${highlighterStyle(theme)};
+  `}
+`;
+
+export const highlighters = {
+  yellow: HighlighterYellow,
+  blue: HighlighterBlue,
+  red: HighlighterRed,
+};
 
 export const Description = styled.div`
   ${({ theme }) => css`
