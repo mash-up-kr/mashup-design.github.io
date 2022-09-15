@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, HeadFC } from 'gatsby';
-import Layout from '@/components/common/Layout/Layout';
-import { ArticleSection, Header } from '@/components';
+import { Layout, ArticleSection, Header } from '@/components';
 import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
 
 interface IndexPageProps {
