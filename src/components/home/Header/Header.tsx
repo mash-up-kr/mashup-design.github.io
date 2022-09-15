@@ -14,7 +14,7 @@ const Header = () => {
         <Styled.Highlighter />
         <Styled.Star />
         <Styled.Shovel />
-        <Styled.ShovelNoShadow />
+        <Styled.HighlighterNoShadow />
         <Styled.HeadingText>Mash-Up</Styled.HeadingText>
         <Styled.HeadingText>designs</Styled.HeadingText>
         <Styled.HeadingText>the highlights.</Styled.HeadingText>

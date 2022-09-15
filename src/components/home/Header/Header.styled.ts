@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import HighlightsSvg from '@/assets/svg/highlights.svg';
 import HighlighterSvg from '@/assets/svg/highlighter.svg';
-import ShovelSvg from '@/assets/svg/shovel.svg';
-import ShovelNoShadowSvg from '@/assets/svg/shovel-no-shadow.svg';
+import HighlighterNoShadowSvg from '@/assets/svg/highlighter-yellow-no-shadow.svg';
 import StarSvg from '@/assets/svg/star.svg';
 
 export const Header = styled.header`
@@ -54,7 +54,7 @@ export const HeadingText = styled.span`
   `}
 `;
 
-export const Highlighter = styled(HighlighterSvg)`
+export const Highlighter = styled(HighlightsSvg)`
   ${({ theme }) => css`
     position: absolute;
     top: 6.6rem;
@@ -221,7 +221,7 @@ export const Star = styled(StarSvg)`
   `}
 `;
 
-export const Shovel = styled(ShovelSvg)`
+export const Shovel = styled(HighlighterSvg)`
   ${({ theme }) => css`
     position: absolute;
     top: -0.2rem;
@@ -240,7 +240,7 @@ export const Shovel = styled(ShovelSvg)`
   `}
 `;
 
-export const ShovelNoShadow = styled(ShovelNoShadowSvg)`
+export const HighlighterNoShadow = styled(HighlighterNoShadowSvg)`
   ${({ theme }) => css`
     display: none;
     @media (max-width: ${theme.breakPoint.media.mobile}) {
@@ -249,7 +249,7 @@ export const ShovelNoShadow = styled(ShovelNoShadowSvg)`
       top: -8rem;
       left: 50%;
       transform: translate3d(-50%, 0, 0);
-      width: 88rem;
+      width: 8.8rem;
       height: 6rem;
     }
   `}
