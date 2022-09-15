@@ -9,7 +9,9 @@ export const ArticleSection = styled.section`
     grid-template-rows: auto 40.4rem;
     column-gap: 3rem;
     row-gap: 3.6rem;
-    padding: 5rem 0 0;
+    margin: 0 auto;
+    padding: 5rem 2.4rem 0;
+    max-width: 120rem;
 
     & > article {
       &:first-of-type {

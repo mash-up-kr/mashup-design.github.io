@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, HeadFC } from 'gatsby';
-import { Layout, ArticleSection, Header } from '@/components';
+import { ArticleSection, Header, WhatWeDo, HomeLayout } from '@/components';
 import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
 
 interface IndexPageProps {
@@ -15,12 +15,13 @@ const IndexPage = ({ data }: IndexPageProps) => {
   const { allContentfulArticles } = data;
 
   return (
-    <Layout>
+    <HomeLayout>
       <Header />
       <main>
         <ArticleSection allContentfulArticles={allContentfulArticles} />
+        <WhatWeDo />
       </main>
-    </Layout>
+    </HomeLayout>
   );
 };
 
