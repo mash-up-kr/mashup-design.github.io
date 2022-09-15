@@ -7,7 +7,9 @@ import StarSvg from '@/assets/svg/star.svg';
 
 export const Header = styled.header`
   ${({ theme }) => css`
+    margin: 0 auto;
     padding: 8.7rem 0 4rem;
+    max-width: 120rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
       padding: 10.3rem 0 3.9rem;
