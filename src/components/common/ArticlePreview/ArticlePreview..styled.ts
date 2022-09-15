@@ -33,6 +33,7 @@ export const Heading = styled.h3`
       ${theme.fonts.bold24};
       order: 2;
       color: ${theme.colors.light.black};
+      text-align: left;
     `}
 `;
 
@@ -47,6 +48,7 @@ export const CreateAt = styled.time`
       ${theme.fonts.medium16};
       order: 3;
       color: ${theme.colors.light.gray200};
+      text-align: left;
     `}
 `;
 
