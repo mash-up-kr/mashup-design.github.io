@@ -1,4 +1,4 @@
-import { ArticleType } from '@/components/common/ArticlePreviewMd/ArticlePreview';
+import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
 import * as Styled from './ArticlePreviewLg.styled';
 
 interface ArticlePreviewLgProps {
@@ -6,7 +6,7 @@ interface ArticlePreviewLgProps {
 }
 
 const ArticlePreviewLg = ({ article }: ArticlePreviewLgProps) => {
-  const { categories, createdAt, description, slug, thumbnail, title } = article;
+  const { tag, createdAt, description, slug, thumbnail, title } = article;
 
   return (
     <Styled.ArticlePreviewLg>
@@ -15,9 +15,7 @@ const ArticlePreviewLg = ({ article }: ArticlePreviewLgProps) => {
           <Styled.Heading>{title}</Styled.Heading>
           <Styled.TagList>
             <Styled.Latest>최신</Styled.Latest>
-            {categories.map((category) => (
-              <Styled.Tag key={category}>{category}</Styled.Tag>
-            ))}
+            <Styled.Tag>{tag}</Styled.Tag>
           </Styled.TagList>
           <Styled.Description>{description}</Styled.Description>
           <Styled.CreateAt>{createdAt}</Styled.CreateAt>

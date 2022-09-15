@@ -5,7 +5,7 @@ export interface ArticleType {
   title: string;
   slug: string;
   description: string;
-  categories: string[];
+  tag: string;
   thumbnail: { gatsbyImageData: IGatsbyImageData };
   createdAt: string;
 }
@@ -15,7 +15,7 @@ interface ArticlePreviewMdProps {
 }
 
 const ArticlePreview = ({ article }: ArticlePreviewMdProps) => {
-  const { categories, createdAt, slug, thumbnail, title } = article;
+  const { tag, createdAt, slug, thumbnail, title } = article;
 
   return (
     <Styled.ArticlePreview>
@@ -24,9 +24,7 @@ const ArticlePreview = ({ article }: ArticlePreviewMdProps) => {
           <Styled.Heading>{title}</Styled.Heading>
           <Styled.TagList>
             <Styled.Latest>최신</Styled.Latest>
-            {categories.map((category) => (
-              <Styled.Tag key={category}>{category}</Styled.Tag>
-            ))}
+            <Styled.Tag>{tag}</Styled.Tag>
           </Styled.TagList>
           <Styled.CreateAt>{createdAt}</Styled.CreateAt>
         </Styled.ContentWrapper>
