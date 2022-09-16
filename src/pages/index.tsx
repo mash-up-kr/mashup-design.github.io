@@ -1,18 +1,21 @@
 import React from 'react';
 import { graphql, HeadFC } from 'gatsby';
-import { ArticleSection, Header, WhatWeDo, HomeLayout } from '@/components';
-import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
+import { ArticleSection, Header, WhatWeDo, HomeLayout, ProjectSection } from '@/components';
+import { ArticleType, ProjectType } from '@/components/common/ArticlePreview/ArticlePreview';
 
 interface IndexPageProps {
   data: {
     allContentfulArticles: {
       nodes: ArticleType[];
     };
+    allContentfulProject: {
+      nodes: ProjectType[];
+    };
   };
 }
 
 const IndexPage = ({ data }: IndexPageProps) => {
-  const { allContentfulArticles } = data;
+  const { allContentfulArticles, allContentfulProject } = data;
 
   return (
     <HomeLayout>
@@ -20,6 +23,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
       <main>
         <ArticleSection allContentfulArticles={allContentfulArticles} />
         <WhatWeDo />
+        <ProjectSection allContentfulProject={allContentfulProject} />
       </main>
     </HomeLayout>
   );
@@ -34,6 +38,17 @@ export const query = graphql`
         title
         slug
         description
+        tag
+        thumbnail {
+          gatsbyImageData
+        }
+        createdAt(formatString: "YYYY.MM.DD.")
+      }
+    }
+    allContentfulProject {
+      nodes {
+        title
+        slug
         tag
         thumbnail {
           gatsbyImageData

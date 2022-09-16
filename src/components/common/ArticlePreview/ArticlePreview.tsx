@@ -10,8 +10,16 @@ export interface ArticleType {
   createdAt: string;
 }
 
+export interface ProjectType {
+  title: string;
+  slug: string;
+  tag: string;
+  thumbnail: { gatsbyImageData: IGatsbyImageData };
+  createdAt: string;
+}
+
 interface ArticlePreviewMdProps {
-  article: ArticleType;
+  article: ArticleType | ProjectType;
 }
 
 const ArticlePreview = ({ article }: ArticlePreviewMdProps) => {
