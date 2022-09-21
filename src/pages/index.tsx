@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, HeadFC } from 'gatsby';
-import { ArticleSection, Header, WhatWeDo, HomeLayout, ProjectSection } from '@/components';
+import { ArticleSection, Header, WhatWeDo, Layout, ProjectSection } from '@/components';
 import { ArticleType, ProjectType } from '@/components/common/ArticlePreview/ArticlePreview';
 
 interface IndexPageProps {
@@ -18,14 +18,14 @@ const IndexPage = ({ data }: IndexPageProps) => {
   const { allContentfulArticles, allContentfulProject } = data;
 
   return (
-    <HomeLayout>
+    <Layout>
       <Header />
       <main>
         <ArticleSection allContentfulArticles={allContentfulArticles} />
         <WhatWeDo />
         <ProjectSection allContentfulProject={allContentfulProject} />
       </main>
-    </HomeLayout>
+    </Layout>
   );
 };
 
