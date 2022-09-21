@@ -12,6 +12,7 @@ export const Header = styled.header`
     flex-flow: column nowrap;
     align-items: center;
     height: 40rem;
+    background: ${theme.colors.light.gray50};
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       height: 32rem;
@@ -50,6 +51,10 @@ export const Heading = styled.h2`
     position: relative;
     margin: 0 0.8rem 0 1.6rem;
 
+    & > span {
+      position: relative;
+    }
+
     @media (max-width: ${theme.breakPoint.media.tablet}) {
       ${theme.fonts.semibold60};
     }
@@ -75,7 +80,6 @@ export const Underline = styled.div<{ color: HighlightColor }>`
     width: 100%;
     height: 1.6rem;
     background: ${getHighlightColor(theme, color)};
-    z-index: ${theme.zIndex.textBackground};
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       ${theme.fonts.semibold40};

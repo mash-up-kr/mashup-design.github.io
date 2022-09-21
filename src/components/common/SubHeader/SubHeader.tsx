@@ -17,8 +17,8 @@ const SubHeader = ({ title, description, color }: HeaderProps) => {
         <Styled.FlexBox>
           <Styled.Star color={color} />
           <Styled.Heading>
-            {title}
             <Styled.Underline color={color} />
+            <span>{title}</span>
           </Styled.Heading>
         </Styled.FlexBox>
         <Highlighter />
