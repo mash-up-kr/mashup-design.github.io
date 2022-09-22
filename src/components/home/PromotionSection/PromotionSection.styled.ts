@@ -113,7 +113,7 @@ export const SpeechBubble = styled(SpeechBubbleSvg)`
 export const TIcon = styled(TIconSvg)`
   ${({ theme }) => css`
     position: absolute;
-    top: 8.1rem;
+    top: 9.3rem;
     right: 6.8rem;
     width: 2.6rem;
     height: 2.922rem;
@@ -126,7 +126,7 @@ export const TIcon = styled(TIconSvg)`
 export const MouseCursor = styled(MouseCursorSvg)`
   ${({ theme }) => css`
     position: absolute;
-    bottom: 8rem;
+    bottom: 9.3rem;
     right: 8.1rem;
     width: 3.05rem;
     height: 3.85rem;
