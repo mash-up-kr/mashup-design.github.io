@@ -32,7 +32,7 @@ export const PromotionSection = styled.section`
   `}
 `;
 
-export const MainTextSection = styled.p`
+export const MainTextSection = styled.div`
   ${({ theme }) => css`
     position: relative;
     display: inline-block;
