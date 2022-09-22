@@ -25,6 +25,10 @@ export const PromotionSection = styled.section`
     @media (max-width: ${theme.breakPoint.media.tablet}) {
       padding: 11.3rem 0 12.4rem;
     }
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      padding: 22.8rem 0 5rem;
+    }
   `}
 `;
 
@@ -91,6 +95,10 @@ export const TextUnderLine = styled.div`
       height: 1.4rem;
       bottom: -0.2rem;
     }
+
+    @media (max-width: ${theme.breakPoint.media.tablet}) {
+      height: 1.8rem;
+    }
   `}
 `;
 
@@ -103,6 +111,11 @@ export const DrawingLine = styled(DrawingLineSvg)`
     @media (max-width: ${theme.breakPoint.media.tablet}) {
       top: -0.2rem;
       left: -18.413rem;
+    }
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      top: -15.7rem;
+      left: -2.6rem;
     }
   `}
 `;
@@ -187,19 +200,34 @@ export const HighlighterYellow = styled(HighlighterYellowSvg)`
       width: 11.4rem;
       height: 8rem;
     }
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      top: -9rem;
+      right: -1.1rem;
+      width: 8.6rem;
+      height: 6rem;
+    }
   `}
 `;
 
 export const HighlighterRed = styled(HighlighterRedSvg)`
   ${({ theme }) => css`
     position: absolute;
-    top: 11.2rem;
-    right: 0;
+    top: -11.4rem;
+    right: -30.1rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
-      top: 6.3rem;
+      top: -5.3rem;
+      right: -25.2rem;
       width: 11.4rem;
       height: 8rem;
+    }
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      top: -20.3rem;
+      right: -2.8rem;
+      width: 8.6rem;
+      height: 6rem;
     }
   `}
 `;
@@ -214,6 +242,11 @@ export const Description = styled.p`
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
       margin-bottom: 3.4rem;
+    }
+
+    @media (max-width: ${theme.breakPoint.media.mobile}) {
+      ${theme.fonts.medium16};
+      padding: 0 2.4rem;
     }
   `}
 `;

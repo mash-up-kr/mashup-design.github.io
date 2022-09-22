@@ -16,6 +16,7 @@ const PromotionSection = () => {
           <Styled.TIcon />
           <Styled.MouseCursor />
           <Styled.HighlighterYellow />
+          <Styled.HighlighterRed />
         </Styled.MainTextSection>
         <Styled.Description>
           {
@@ -29,7 +30,6 @@ const PromotionSection = () => {
         >
           매시업 홈페이지 구경하자
         </Styled.OfficialMashUpPageLink>
-        <Styled.HighlighterRed />
       </Styled.PromotionSection>
     </Styled.Background>
   );
