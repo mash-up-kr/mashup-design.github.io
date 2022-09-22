@@ -23,11 +23,7 @@ const PromotionSection = () => {
             '매시업 프로덕트 디자인팀과 함께 해주세요!\n매 기수 모집일정은 홈페이지/인스타그램에 공지됩니다.'
           }
         </Styled.Description>
-        <Styled.OfficialMashUpPageLink
-          href="https://recruit.mash-up.kr"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Styled.OfficialMashUpPageLink href="https://mash-up.kr" target="_blank" rel="noreferrer">
           매시업 홈페이지 구경하자
         </Styled.OfficialMashUpPageLink>
       </Styled.PromotionSection>
