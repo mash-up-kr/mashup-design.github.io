@@ -57,6 +57,13 @@ export const fonts = {
     line-height: 1.5;
     letter-spacing: -0.01em;
   `,
+  bold36: css`
+    font-weight: 700;
+    font-size: 3.6rem;
+    font-family: Pretendard;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  `,
   bold32: css`
     font-weight: 700;
     font-size: 3.2rem;
@@ -77,6 +84,13 @@ export const fonts = {
     font-family: Pretendard;
     line-height: 1.6;
     letter-spacing: -0.01em;
+  `,
+  bold16: css`
+    font-weight: 700;
+    font-size: 1.6rem;
+    font-family: Pretendard;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
   `,
   bold14: css`
     font-weight: 700;

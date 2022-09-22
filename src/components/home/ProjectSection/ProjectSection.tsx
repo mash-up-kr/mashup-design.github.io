@@ -28,7 +28,7 @@ const ProjectSection = ({ allContentfulProject }: ProjectSectionProps) => {
       <Styled.Heading>Featured project</Styled.Heading>
       <Styled.ProjectList>
         {projectList.map((project) => (
-          <ArticlePreview article={project} />
+          <ArticlePreview article={project} key={project.slug} />
         ))}
       </Styled.ProjectList>
       <Styled.MoreProjectLink to={ROUTES.PROJECTS}>더 많은 프로젝트 보기</Styled.MoreProjectLink>
