@@ -23,6 +23,7 @@ export const PromotionSection = styled.section`
     text-align: center;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      padding: 11.3rem 0 12.4rem;
     }
   `}
 `;
@@ -32,10 +33,11 @@ export const MainTextSection = styled.p`
     position: relative;
     display: inline-block;
     margin-bottom: 3rem;
-    width: 59.4rem;
+    width: auto;
     text-align: center;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      width: auto;
     }
   `}
 `;
@@ -47,17 +49,30 @@ export const MainText = styled.span`
     color: ${theme.colors.light.white};
     letter-spacing: -0.015em;
     line-height: 1.2;
-  `}
 
-  &:nth-of-type(2) {
-    margin-bottom: 0.5rem;
-  }
-  &:nth-of-type(3) {
-    margin-bottom: 0.2rem;
-  }
-  &:nth-of-type(4) {
-    position: relative;
-  }
+    &:nth-of-type(2) {
+      margin-bottom: 0.5rem;
+    }
+    &:nth-of-type(3) {
+      margin-bottom: 0.2rem;
+    }
+    &:nth-of-type(4) {
+      position: relative;
+    }
+
+    @media (max-width: ${theme.breakPoint.media.tablet}) {
+      ${theme.fonts.bold36};
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+
+      &:nth-of-type(2) {
+        margin-bottom: 0;
+      }
+      &:nth-of-type(3) {
+        margin-bottom: 0;
+      }
+    }
+  `}
 `;
 
 export const TextUnderLine = styled.div`
@@ -70,6 +85,12 @@ export const TextUnderLine = styled.div`
     height: 1.8rem;
     background: ${theme.colors.light.yellow300};
     opacity: 0.7;
+
+    @media (max-width: ${theme.breakPoint.media.tablet}) {
+      width: 30.4rem;
+      height: 1.4rem;
+      bottom: -0.2rem;
+    }
   `}
 `;
 
@@ -80,6 +101,8 @@ export const DrawingLine = styled(DrawingLineSvg)`
     left: -12.873rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      top: -0.2rem;
+      left: -18.413rem;
     }
   `}
 `;
@@ -93,6 +116,10 @@ export const FourWayArrow = styled(FourWayArrowSvg)`
     height: 3.6rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      top: 5.2rem;
+      left: 1.5rem;
+      width: 2.9rem;
+      height: 2.9rem;
     }
   `}
 `;
@@ -106,6 +133,10 @@ export const SpeechBubble = styled(SpeechBubbleSvg)`
     height: 3.35rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      top: -1.1rem;
+      right: 3.1rem;
+      width: 2.7rem;
+      height: 2.7rem;
     }
   `}
 `;
@@ -119,6 +150,10 @@ export const TIcon = styled(TIconSvg)`
     height: 2.922rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      top: 4.5rem;
+      right: 2.5rem;
+      width: 2.1rem;
+      height: 2.35rem;
     }
   `}
 `;
@@ -132,6 +167,10 @@ export const MouseCursor = styled(MouseCursorSvg)`
     height: 3.85rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      bottom: 4.1rem;
+      right: 2.9rem;
+      width: 2.45rem;
+      height: 3.1rem;
     }
   `}
 `;
@@ -143,6 +182,10 @@ export const HighlighterYellow = styled(HighlighterYellowSvg)`
     right: -21.1rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      top: 8.5rem;
+      right: -14.5rem;
+      width: 11.4rem;
+      height: 8rem;
     }
   `}
 `;
@@ -154,6 +197,9 @@ export const HighlighterRed = styled(HighlighterRedSvg)`
     right: 0;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
+      top: 6.3rem;
+      width: 11.4rem;
+      height: 8rem;
     }
   `}
 `;
@@ -165,6 +211,10 @@ export const Description = styled.p`
     text-align: center;
     color: ${theme.colors.light.gray100};
     white-space: pre-wrap;
+
+    @media (max-width: ${theme.breakPoint.media.tablet}) {
+      margin-bottom: 3.4rem;
+    }
   `}
 `;
 
@@ -177,5 +227,11 @@ export const OfficialMashUpPageLink = styled.a`
     background: ${theme.colors.light.blue200};
     border-radius: 0.8rem;
     color: ${theme.colors.light.white};
+
+    @media (max-width: ${theme.breakPoint.media.tablet}) {
+      ${theme.fonts.bold16};
+      line-height: 1.5;
+      padding: 1.4rem 7.6rem;
+    }
   `}
 `;
