@@ -59,6 +59,8 @@ export const HamburgerMenuToggleButton = styled.button`
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       display: block;
+      padding: 0;
+      border: 0;
       background: transparent;
       cursor: pointer;
     }
