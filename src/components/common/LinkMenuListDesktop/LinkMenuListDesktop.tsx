@@ -1,6 +1,6 @@
 import { ROUTES } from '@/constants/route';
 import { colors } from '@/styles/themes/colors';
-import * as Styled from './LinkMenuList.styled';
+import * as Styled from './LinkMenuListDesktop.styled';
 
 const linkMenuList = [
   {

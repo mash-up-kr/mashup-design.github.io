@@ -11,36 +11,17 @@ export const LinkMenuList = styled.ul`
     flex-flow: row nowrap;
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
-      position: absolute;
-      top: 6.4rem;
-      left: 0;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      height: 100vh;
-      background: ${theme.colors.light.white};
+      display: none;
     }
   `}
 `;
 
 export const Menu = styled.li`
-  ${({ theme }) => css`
-    margin-right: 2rem;
+  margin-right: 2rem;
 
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      margin-top: 4.8rem;
-      margin-right: 0;
-
-      :first-of-type {
-        margin-top: 0;
-      }
-    }
-  `}
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 interface MenuLinkProps {
@@ -62,13 +43,6 @@ export const MenuLink = styled(Link)<MenuLinkProps>`
     :active {
       border-bottom: 0.8rem solid ${active_border_color};
     }
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      ${theme.fonts.bold20};
-      :active {
-        border-bottom: 1rem solid ${active_border_color};
-      }
-    }
   `}
 `;
 
@@ -89,11 +63,6 @@ export const JoinUs = styled.a<JoinUsProps>`
       & > svg > path {
         fill: ${hoverColor};
       }
-    }
-
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      ${theme.fonts.bold20};
-      padding-bottom: 0;
     }
   `}
 `;
