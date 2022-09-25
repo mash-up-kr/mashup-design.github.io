@@ -2,7 +2,7 @@ import MashUpLogo from '@/assets/svg/mashup-logo.svg';
 import { ROUTES } from '@/constants/route';
 import { useState } from 'react';
 import CloseButton from '@/assets/svg/x-icon.svg';
-import { LinkMenuList, LinkMenuListMobile } from '@/components';
+import { LinkMenuListDesktop, LinkMenuListMobile } from '@/components';
 import * as Styled from './GlobalNavigationBar.styled';
 
 const GlobalNavigationBar = () => {
@@ -20,7 +20,7 @@ const GlobalNavigationBar = () => {
         <Styled.MashUpPd />
       </Styled.Heading>
 
-      <LinkMenuList />
+      <LinkMenuListDesktop />
       {isHamburgerMenuOpen && <LinkMenuListMobile />}
 
       <Styled.HamburgerMenuToggleButton onClick={handleToggleHamburgerMenu}>
