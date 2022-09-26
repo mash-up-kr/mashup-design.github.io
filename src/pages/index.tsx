@@ -1,4 +1,3 @@
-import React from 'react';
 import { graphql, HeadFC } from 'gatsby';
 import {
   ArticleSection,
@@ -40,7 +39,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
 export default IndexPage;
 
 export const query = graphql`
-  query getArticles {
+  query getIndexPageData {
     allContentfulArticles {
       nodes {
         title
