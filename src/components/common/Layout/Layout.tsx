@@ -14,8 +14,8 @@ const Layout = ({ children }: LayoutProps) => {
       <GlobalNavigationBar />
       <Styled.Layout>
         <Styled.ContentsSection>{children}</Styled.ContentsSection>
+        <Footer />
       </Styled.Layout>
-      <Footer />
     </ThemeProvider>
   );
 };
