@@ -17,7 +17,7 @@ export const ArticleList = styled.ul`
     }
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
-      grid-template-columns: 86.67vw;
+      grid-template-columns: 100%;
       grid-auto-rows: 119.45vw;
       column-gap: 0;
     }
