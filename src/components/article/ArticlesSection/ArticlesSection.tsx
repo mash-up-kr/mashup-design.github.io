@@ -1,20 +1,19 @@
-import { FilterWithTag } from '@/components';
+import { FilterWithTag, ArticleList } from '@/components';
 import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
 import * as Styled from './ArticlesSection.styled';
 
 interface ArticlesSectionProps {
-  allContentfulArticles: {
-    nodes: ArticleType[];
-  };
+  articles: ArticleType[];
 }
 
-const ArticlesSection = ({ allContentfulArticles }: ArticlesSectionProps) => {
-  const tagList = allContentfulArticles.nodes.map(({ tag }) => tag);
+const ArticlesSection = ({ articles }: ArticlesSectionProps) => {
+  const tagList = articles.map(({ tag }) => tag);
   const deDuplicatedTagList = ['전체', ...new Set(tagList)];
 
   return (
     <Styled.ArticlesSection>
       <FilterWithTag tagList={deDuplicatedTagList} />
+      <ArticleList articles={articles} />
     </Styled.ArticlesSection>
   );
 };

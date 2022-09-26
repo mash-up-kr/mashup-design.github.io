@@ -20,7 +20,7 @@ const Article = ({ data }: ArticlePageProps) => {
         description="매시업 디자인팀의 디자인 고찰 이야기"
         color="blue"
       />
-      <ArticlesSection allContentfulArticles={allContentfulArticles} />
+      <ArticlesSection articles={allContentfulArticles.nodes} />
     </Layout>
   );
 };
@@ -38,7 +38,7 @@ export const query = graphql`
         thumbnail {
           gatsbyImageData
         }
-        createdAt(formatString: "YYYY.MM.DD.")
+        createdAt(formatString: "MMMM DD, YYYY")
       }
     }
   }
