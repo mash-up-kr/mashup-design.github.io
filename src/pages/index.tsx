@@ -49,7 +49,7 @@ export const query = graphql`
         thumbnail {
           gatsbyImageData
         }
-        createdAt(formatString: "YYYY.MM.DD.")
+        createdAt(formatString: "MMMM DD, YYYY")
       }
     }
     allContentfulProject {
@@ -60,7 +60,7 @@ export const query = graphql`
         thumbnail {
           gatsbyImageData
         }
-        createdAt(formatString: "YYYY.MM.DD.")
+        createdAt(formatString: "MMMM DD, YYYY")
       }
     }
   }
