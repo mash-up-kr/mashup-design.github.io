@@ -3,6 +3,7 @@ import { ROUTES } from '@/constants/route';
 import { useState } from 'react';
 import CloseButton from '@/assets/svg/x-icon.svg';
 import { LinkMenuListDesktop, LinkMenuListMobile } from '@/components';
+import { useScrollTop } from '@/hooks';
 import * as Styled from './GlobalNavigationBar.styled';
 
 const GlobalNavigationBar = () => {
@@ -12,9 +13,11 @@ const GlobalNavigationBar = () => {
     setIsHamburgerMenuOpen((prevHamburgerMenuState) => !prevHamburgerMenuState);
   };
 
+  const { isScrollTop } = useScrollTop();
+
   return (
-    <Styled.GlobalNavigationBar>
-      <Styled.Heading to={ROUTES.HOME}>
+    <Styled.GlobalNavigationBar isScrollTop={isScrollTop}>
+      <Styled.Heading to={ROUTES.HOME} isScrollTop={isScrollTop}>
         <MashUpLogo />
         <Styled.HeadingText>Mash Up Design</Styled.HeadingText>
         <Styled.MashUpPd />
