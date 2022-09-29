@@ -1,4 +1,5 @@
 import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
+import { ROUTES } from '@/constants/route';
 import * as Styled from './ArticlePreviewLg.styled';
 
 interface ArticlePreviewLgProps {
@@ -10,7 +11,7 @@ const ArticlePreviewLg = ({ article }: ArticlePreviewLgProps) => {
 
   return (
     <Styled.ArticlePreviewLg>
-      <Styled.ArticleDetailLink to={slug}>
+      <Styled.ArticleDetailLink to={`${ROUTES.ARTICLE}/${slug}`}>
         <Styled.ContentWrapper>
           <Styled.Heading>{title}</Styled.Heading>
           <Styled.TagList>
