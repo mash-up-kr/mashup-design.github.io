@@ -55,12 +55,13 @@ export const Heading = styled.h3`
 
 export const Thumbnail = styled(GatsbyImage)`
   ${({ theme }) => css`
-    min-width: 57.2rem;
+    width: 57.2rem;
+    height: 41.5rem;
     order: 1;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
-      min-width: 100%;
-      min-height: 51.23vw;
+      width: 100%;
+      height: 51.23vw;
     }
   `}
 `;
