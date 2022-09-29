@@ -1,5 +1,11 @@
+import { ArticleTemplateLayout, Layout } from '@/components';
+
 const articleTemplate = () => {
-  return <div>articleTemplate</div>;
+  return (
+    <Layout>
+      <ArticleTemplateLayout />
+    </Layout>
+  );
 };
 
 export default articleTemplate;
