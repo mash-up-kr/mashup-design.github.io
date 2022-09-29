@@ -1,3 +1,4 @@
+import { ROUTES } from '@/constants/route';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import * as Styled from './ArticlePreview..styled';
 
@@ -13,6 +14,7 @@ export interface ArticleType {
 export interface ProjectType {
   title: string;
   slug: string;
+  description: never;
   tag: string;
   thumbnail: { gatsbyImageData: IGatsbyImageData };
   createdAt: string;
@@ -23,11 +25,13 @@ interface ArticlePreviewMdProps {
 }
 
 const ArticlePreview = ({ article }: ArticlePreviewMdProps) => {
-  const { tag, createdAt, slug, thumbnail, title } = article;
+  const { tag, createdAt, slug, thumbnail, title, description } = article;
+
+  const linkPrefix = !description ? ROUTES.PROJECTS : ROUTES.ARTICLE;
 
   return (
     <Styled.ArticlePreview>
-      <Styled.ArticleDetailLink to={slug}>
+      <Styled.ArticleDetailLink to={`${linkPrefix}/${slug}`}>
         <Styled.ContentWrapper>
           <Styled.Heading>{title}</Styled.Heading>
           <Styled.TagList>
