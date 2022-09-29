@@ -1,16 +1,22 @@
+import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
 import * as Styled from './ArticleDetailHeader.styled';
 
-const ArticleDetailHeader = () => {
+interface ArticleDetailHeaderProps {
+  article: ArticleType;
+}
+
+const ArticleDetailHeader = ({ article }: ArticleDetailHeaderProps) => {
+  const { createdAt, tag, title } = article;
   return (
     <Styled.ArticleDetailHeader>
-      <Styled.Tag>디자인 스터디</Styled.Tag>
+      <Styled.Tag>{tag}</Styled.Tag>
       <Styled.Heading>
-        웹 디자인 스터디 이야기 - 프레이머는 어떻게 사용해야할까?
+        {title}
         <Styled.Highlights />
         <Styled.LeftStar />
         <Styled.RightStar />
       </Styled.Heading>
-      <Styled.CreateAt>2022. 08. 05</Styled.CreateAt>
+      <Styled.CreateAt>{createdAt}</Styled.CreateAt>
     </Styled.ArticleDetailHeader>
   );
 };

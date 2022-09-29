@@ -1,10 +1,15 @@
 import { ArticleDetailHeader } from '@/components';
+import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
 import * as Styled from './ArticleTemplateLayout.styled';
 
-const ArticleTemplateLayout = () => {
+interface ArticleTemplateLayoutProps {
+  article: ArticleType;
+}
+
+const ArticleTemplateLayout = ({ article }: ArticleTemplateLayoutProps) => {
   return (
     <Styled.ArticleTemplateLayout>
-      <ArticleDetailHeader />
+      <ArticleDetailHeader article={article} />
     </Styled.ArticleTemplateLayout>
   );
 };
