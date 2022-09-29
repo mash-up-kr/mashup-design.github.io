@@ -9,6 +9,7 @@ export interface ArticleType {
   tag: string;
   thumbnail: { gatsbyImageData: IGatsbyImageData };
   createdAt: string;
+  contentImages: Array<{ gatsbyImageData: IGatsbyImageData }>;
 }
 
 export interface ProjectType {

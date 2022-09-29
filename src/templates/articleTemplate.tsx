@@ -30,6 +30,9 @@ export const queryMarkdownDataBySlug = graphql`
       thumbnail {
         gatsbyImageData
       }
+      contentImages {
+        gatsbyImageData
+      }
       createdAt(formatString: "YYYY. MM. DD")
     }
   }
