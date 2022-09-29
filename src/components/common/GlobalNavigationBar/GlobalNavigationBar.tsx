@@ -16,7 +16,7 @@ const GlobalNavigationBar = () => {
   const { isScrollTop } = useScrollTop();
 
   return (
-    <Styled.GlobalNavigationBar isScrollTop={isScrollTop}>
+    <Styled.GlobalNavigationBar isScrollTop={isScrollTop} isHamburgerMenuOpen={isHamburgerMenuOpen}>
       <Styled.Heading to={ROUTES.HOME} isScrollTop={isScrollTop}>
         <MashUpLogo />
         <Styled.HeadingText>Mash Up Design</Styled.HeadingText>

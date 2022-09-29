@@ -5,10 +5,11 @@ import { Link } from 'gatsby';
 
 interface GlobalNavigationBarProps {
   isScrollTop: boolean;
+  isHamburgerMenuOpen: boolean;
 }
 
 export const GlobalNavigationBar = styled.nav<GlobalNavigationBarProps>`
-  ${({ theme, isScrollTop }) => css`
+  ${({ theme, isScrollTop, isHamburgerMenuOpen }) => css`
     position: fixed;
     top: 0;
     left: 50%;
@@ -22,7 +23,7 @@ export const GlobalNavigationBar = styled.nav<GlobalNavigationBarProps>`
     width: 100%;
     max-width: 120rem;
     transition: 0.2s;
-    background: ${isScrollTop ? 'transparent' : theme.colors.light.white};
+    background: ${!isHamburgerMenuOpen && isScrollTop ? 'transparent' : theme.colors.light.white};
     z-index: ${theme.zIndex.gnb};
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
