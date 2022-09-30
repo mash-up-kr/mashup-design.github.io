@@ -49,9 +49,12 @@ export const MenuLink = styled(Link)<MenuLinkProps>`
       padding-bottom: 0;
       color: ${theme.colors.light.gray400};
 
-      :hover {
-        color: ${hover_color};
+      @media (hover: hover) {
+        :hover {
+          color: ${hover_color};
+        }
       }
+
       :active {
         border-bottom: 1rem solid ${active_border_color};
       }
@@ -72,11 +75,13 @@ export const JoinUs = styled.a<JoinUsProps>`
       color: ${theme.colors.light.gray400};
       cursor: pointer;
 
-      :hover {
-        color: ${hoverColor};
+      @media (hover: hover) {
+        :hover {
+          color: ${hoverColor};
 
-        & > svg > path {
-          fill: ${hoverColor};
+          & > svg > path {
+            fill: ${hoverColor};
+          }
         }
       }
     }

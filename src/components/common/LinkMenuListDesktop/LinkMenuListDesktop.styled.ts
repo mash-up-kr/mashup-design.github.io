@@ -36,8 +36,10 @@ export const MenuLink = styled(Link)<MenuLinkProps>`
     color: ${theme.colors.light.gray400};
     padding-bottom: 0;
 
-    :hover {
-      color: ${hover_color};
+    @media (hover: hover) {
+      :hover {
+        color: ${hover_color};
+      }
     }
 
     :active {
@@ -57,8 +59,10 @@ export const JoinUs = styled.a<JoinUsProps>`
     color: ${theme.colors.light.gray400};
     cursor: pointer;
 
-    :hover {
-      color: ${hoverColor};
+    @media (hover: hover) {
+      :hover {
+        color: ${hoverColor};
+      }
 
       & > svg > path {
         fill: ${hoverColor};

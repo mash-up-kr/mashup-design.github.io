@@ -163,10 +163,12 @@ export const ExternalLink = styled.a`
         margin-bottom: 0.3rem;
       }
 
-      &:hover {
-        & > div {
-          background: ${theme.colors.light.yellow200};
-          opacity: 0.6;
+      @media (hover: hover) {
+        &:hover {
+          & > div {
+            background: ${theme.colors.light.yellow200};
+            opacity: 0.6;
+          }
         }
       }
 
