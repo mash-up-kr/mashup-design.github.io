@@ -40,6 +40,7 @@ export const Heading = styled.h3`
 export const Thumbnail = styled(GatsbyImage)`
   border-radius: 0 0 1.6rem 1.6rem;
   flex-basis: 100vh;
+  z-index: -1;
 `;
 
 export const CreateAt = styled.time`
