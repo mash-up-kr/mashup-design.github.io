@@ -11,7 +11,7 @@ export const ArticlePreview = styled.article`
 export const ArticleDetailLink = styled(Link)`
   display: flex;
   flex-flow: column nowrap;
-  max-height: 100%;
+  height: 100%;
 `;
 
 export const ContentWrapper = styled.div`
@@ -39,7 +39,7 @@ export const Heading = styled.h3`
 
 export const Thumbnail = styled(GatsbyImage)`
   border-radius: 0 0 1.6rem 1.6rem;
-  flex-basis: 100vh;
+  height: 100%;
   z-index: -1;
 `;
 

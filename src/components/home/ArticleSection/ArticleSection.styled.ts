@@ -6,7 +6,8 @@ export const ArticleSection = styled.section`
     display: grid;
     width: 100%;
     grid-template-columns: calc(50% - 1.5rem) calc(50% - 1.5rem);
-    grid-template-rows: auto 40.4rem;
+    grid-template-rows: auto;
+    grid-auto-rows: 40.4rem;
     column-gap: 3rem;
     row-gap: 3.6rem;
     margin: 0 auto;
@@ -24,13 +25,16 @@ export const ArticleSection = styled.section`
     }
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
-      grid-template-rows: auto 53.1vw;
+      grid-template-rows: auto;
+      grid-auto-rows: 53.1rem;
+
       column-gap: 3.4rem;
     }
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       grid-template-columns: 100%;
-      grid-template-rows: 119.45vw 119.45vw;
+      grid-template-rows: 119.45vw;
+      grid-auto-rows: 119.45vw;
 
       & > article {
         &:first-of-type {
