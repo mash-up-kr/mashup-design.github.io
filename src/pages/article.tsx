@@ -29,7 +29,7 @@ export default Article;
 
 export const query = graphql`
   query getArticlePageData {
-    allContentfulArticles {
+    allContentfulArticles(sort: { fields: createdAt, order: DESC }) {
       nodes {
         title
         slug
