@@ -40,7 +40,7 @@ export default IndexPage;
 
 export const query = graphql`
   query getIndexPageData {
-    allContentfulArticles {
+    allContentfulArticles(sort: { fields: createdAt, order: DESC }) {
       nodes {
         title
         slug
@@ -52,7 +52,7 @@ export const query = graphql`
         createdAt(formatString: "MMMM DD, YYYY")
       }
     }
-    allContentfulProject {
+    allContentfulProject(sort: { fields: createdAt, order: DESC }) {
       nodes {
         title
         slug

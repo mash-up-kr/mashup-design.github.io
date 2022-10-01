@@ -3,8 +3,13 @@ import styled from '@emotion/styled';
 import MashUpPdSvg from '@/assets/svg/mashup-pd.svg';
 import { Link } from 'gatsby';
 
-export const GlobalNavigationBar = styled.nav`
-  ${({ theme }) => css`
+interface GlobalNavigationBarProps {
+  isScrollTop: boolean;
+  isHamburgerMenuOpen: boolean;
+}
+
+export const GlobalNavigationBar = styled.nav<GlobalNavigationBarProps>`
+  ${({ theme, isScrollTop, isHamburgerMenuOpen }) => css`
     position: fixed;
     top: 0;
     left: 50%;
@@ -17,6 +22,8 @@ export const GlobalNavigationBar = styled.nav`
     height: 8rem;
     width: 100%;
     max-width: 120rem;
+    transition: 0.2s;
+    background: ${!isHamburgerMenuOpen && isScrollTop ? 'transparent' : theme.colors.light.white};
     z-index: ${theme.zIndex.gnb};
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
@@ -25,9 +32,17 @@ export const GlobalNavigationBar = styled.nav`
   `}
 `;
 
-export const Heading = styled(Link)`
-  display: flex;
-  align-items: center;
+interface HeadingProps {
+  isScrollTop: boolean;
+}
+
+export const Heading = styled(Link)<HeadingProps>`
+  ${({ isScrollTop }) => css`
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    opacity: ${isScrollTop ? 0 : 1};
+  `}
 `;
 
 export const MashUpPd = styled(MashUpPdSvg)`
