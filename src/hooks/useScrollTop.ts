@@ -8,22 +8,16 @@ const useScrollTop = () => {
     const handleDetectIsScrollTop = throttle(() => {
       const { scrollY } = window;
 
-      if (scrollY !== 0) {
-        if (!isScrollTop) return;
-
-        setIsScrollTop(false);
-        return;
-      }
-
-      setIsScrollTop(true);
+      setIsScrollTop(scrollY === 0);
     }, 200);
+
+    handleDetectIsScrollTop();
 
     window.addEventListener('scroll', handleDetectIsScrollTop);
 
     return () => {
       window.removeEventListener('scroll', handleDetectIsScrollTop);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { isScrollTop };
