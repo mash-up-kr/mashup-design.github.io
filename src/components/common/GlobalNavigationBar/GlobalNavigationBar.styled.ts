@@ -12,19 +12,24 @@ export const GlobalNavigationBar = styled.nav<GlobalNavigationBarProps>`
   ${({ theme, isScrollTop, isHamburgerMenuOpen }) => css`
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translate3d(-50%, 0, 0);
+    left: 0;
+    width: 100%;
+    transition: 0.2s;
+    background: ${!isHamburgerMenuOpen && isScrollTop ? 'transparent' : theme.colors.light.white};
+    z-index: ${theme.zIndex.gnb};
+  `}
+`;
+
+export const GlobalNavigationBarInner = styled.div`
+  ${({ theme }) => css`
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     padding: 0 2.4rem;
-    height: 8rem;
-    width: 100%;
     max-width: 120rem;
-    transition: 0.2s;
-    background: ${!isHamburgerMenuOpen && isScrollTop ? 'transparent' : theme.colors.light.white};
-    z-index: ${theme.zIndex.gnb};
+    height: 8rem;
 
     @media (max-width: ${theme.breakPoint.media.mobile}) {
       height: 6.4rem;

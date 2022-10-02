@@ -17,26 +17,28 @@ const GlobalNavigationBar = () => {
 
   return (
     <Styled.GlobalNavigationBar isScrollTop={isScrollTop} isHamburgerMenuOpen={isHamburgerMenuOpen}>
-      <Styled.Heading to={ROUTES.HOME} isScrollTop={isScrollTop}>
-        <MashUpLogo />
-        <Styled.HeadingText>Mash Up Design</Styled.HeadingText>
-        <Styled.MashUpPd />
-      </Styled.Heading>
+      <Styled.GlobalNavigationBarInner>
+        <Styled.Heading to={ROUTES.HOME} isScrollTop={isScrollTop}>
+          <MashUpLogo />
+          <Styled.HeadingText>Mash Up Design</Styled.HeadingText>
+          <Styled.MashUpPd />
+        </Styled.Heading>
 
-      <LinkMenuListDesktop />
-      {isHamburgerMenuOpen && <LinkMenuListMobile />}
+        <LinkMenuListDesktop />
+        {isHamburgerMenuOpen && <LinkMenuListMobile />}
 
-      <Styled.HamburgerMenuToggleButton onClick={handleToggleHamburgerMenu}>
-        {isHamburgerMenuOpen ? (
-          <CloseButton />
-        ) : (
-          <Styled.Hamburger>
-            <div />
-            <div />
-            <div />
-          </Styled.Hamburger>
-        )}
-      </Styled.HamburgerMenuToggleButton>
+        <Styled.HamburgerMenuToggleButton onClick={handleToggleHamburgerMenu}>
+          {isHamburgerMenuOpen ? (
+            <CloseButton />
+          ) : (
+            <Styled.Hamburger>
+              <div />
+              <div />
+              <div />
+            </Styled.Hamburger>
+          )}
+        </Styled.HamburgerMenuToggleButton>
+      </Styled.GlobalNavigationBarInner>
     </Styled.GlobalNavigationBar>
   );
 };
