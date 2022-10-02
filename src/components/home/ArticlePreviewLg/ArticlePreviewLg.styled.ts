@@ -3,13 +3,34 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
+export const ArticlePreviewLgWrapper = styled.article`
+  position: relative;
+`;
+
+export const ArticlePreviewLgBackground = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    background: #dad9e9;
+    width: 100%;
+    height: 100%;
+    z-index: ${theme.zIndex.textBackground};
+  `}
+`;
+
 export const ArticlePreviewLg = styled.article`
   ${({ theme }) => css`
     box-shadow: 0.4rem 0.4rem 2rem rgba(0, 0, 0, 0.08);
     border-radius: 1rem;
+    background: ${theme.colors.light.white};
+    transition: 0.3s;
 
-    @media (max-width: ${theme.breakPoint.media.mobile}) {
-      border-radius: 1.6rem;
+    @media (hover: hover) {
+      &:hover {
+        transform: translate3d(-1.8rem, -1.8rem, 0);
+      }
     }
   `}
 `;
@@ -58,6 +79,7 @@ export const Thumbnail = styled(GatsbyImage)`
     width: 57.2rem;
     height: 41.5rem;
     order: 1;
+    background: ${theme.colors.light.white};
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
       width: 100%;
