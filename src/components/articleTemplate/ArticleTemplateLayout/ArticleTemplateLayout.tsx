@@ -1,4 +1,4 @@
-import { ArticleDetailHeader, ArticleContentSection } from '@/components';
+import { ArticleDetailHeader, ArticleContentSection, CommentWidget } from '@/components';
 import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
 import * as Styled from './ArticleTemplateLayout.styled';
 
@@ -11,6 +11,7 @@ const ArticleTemplateLayout = ({ article }: ArticleTemplateLayoutProps) => {
     <Styled.ArticleTemplateLayout>
       <ArticleDetailHeader article={article} />
       <ArticleContentSection contentImages={article.contentImages} />
+      <CommentWidget />
     </Styled.ArticleTemplateLayout>
   );
 };
