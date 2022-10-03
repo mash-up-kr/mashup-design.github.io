@@ -37,13 +37,13 @@ export const Heading = styled.h2`
 export const ProjectList = styled.ul`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: repeat(3, 36.4rem);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, 43rem);
     column-gap: 3rem;
     row-gap: 5.7rem;
 
     @media (max-width: ${theme.breakPoint.media.tablet}) {
-      grid-template-columns: repeat(2, 44.94vw);
+      grid-template-columns: repeat(2, auto);
       grid-template-rows: repeat(2, 53.09vw);
       column-gap: 3.4rem;
       row-gap: 2.7rem;
