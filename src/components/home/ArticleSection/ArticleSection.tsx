@@ -19,9 +19,9 @@ const ArticleSection = ({ allContentfulArticles }: ArticleSectionProps) => {
     <Styled.ArticleSection>
       {slicedArticles.map((article, index) =>
         index === 0 && viewportSize !== 'mobile' ? (
-          <ArticlePreviewLg article={article} />
+          <ArticlePreviewLg article={article} key={article.slug} />
         ) : (
-          <ArticlePreview article={article} />
+          <ArticlePreview article={article} key={article.slug} />
         ),
       )}
     </Styled.ArticleSection>
