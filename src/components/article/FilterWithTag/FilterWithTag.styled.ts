@@ -16,13 +16,17 @@ export const FilterWithTag = styled.ul`
   }
 `;
 
-export const Tag = styled.button`
-  ${({ theme }) => css`
+interface TagProps {
+  isSelected: boolean;
+}
+
+export const Tag = styled.button<TagProps>`
+  ${({ theme, isSelected }) => css`
     ${theme.fonts.bold14};
     padding: 0.8rem 1.4rem;
     border: 0;
     border-radius: 4rem;
-    background: ${theme.colors.light.gray50};
-    color: ${theme.colors.light.gray200};
+    background: ${isSelected ? theme.colors.light.blue200 : theme.colors.light.gray50};
+    color: ${isSelected ? theme.colors.light.white : theme.colors.light.gray200};
   `}
 `;
