@@ -1,4 +1,4 @@
-import { ArticleType } from '@/components/common/ArticlePreview/ArticlePreview';
+import { ArticleType, LATEST_COUNT } from '@/components/common/ArticlePreview/ArticlePreview';
 import { ArticlePreview } from '@/components';
 import * as Styled from './ArticleList.styled';
 
@@ -10,10 +10,15 @@ interface ArticleListProps {
 }
 
 const ArticleList = ({ articles, currentFilterByTag }: ArticleListProps) => {
+  const distinguishedLatestArticles = articles.map((article, index) => ({
+    ...article,
+    isLatest: index < LATEST_COUNT,
+  }));
+
   const filteredArticles =
     currentFilterByTag === INITIAL_FILTER_BY_TAG
-      ? articles
-      : articles.filter(({ tag }) => tag === currentFilterByTag);
+      ? distinguishedLatestArticles
+      : distinguishedLatestArticles.filter(({ tag }) => tag === currentFilterByTag);
 
   return (
     <Styled.ArticleList>
