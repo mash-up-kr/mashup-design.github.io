@@ -1,5 +1,5 @@
 import { ArticlePreview } from '@/components/common';
-import { ProjectType } from '@/components/common/ArticlePreview/ArticlePreview';
+import { LATEST_COUNT, ProjectType } from '@/components/common/ArticlePreview/ArticlePreview';
 import { ROUTES } from '@/constants/route';
 import { ViewPort } from '@/constants/viewport';
 import { useDetectViewport } from '@/hooks';
@@ -23,11 +23,16 @@ const ProjectSection = ({ allContentfulProject }: ProjectSectionProps) => {
   const numberOfProjects = getNumberOfProjectsPerViewport(viewportSize);
   const projectList = nodes.slice(0, numberOfProjects);
 
+  const distinguishedLatestProjects = projectList.map((article, index) => ({
+    ...article,
+    isLatest: index < LATEST_COUNT,
+  }));
+
   return (
     <Styled.ProjectSection>
       <Styled.Heading>Featured project</Styled.Heading>
       <Styled.ProjectList>
-        {projectList.map((project) => (
+        {distinguishedLatestProjects.map((project) => (
           <ArticlePreview article={project} key={project.slug} />
         ))}
       </Styled.ProjectList>

@@ -62,10 +62,10 @@ export const JoinUs = styled.a<JoinUsProps>`
     @media (hover: hover) {
       :hover {
         color: ${hoverColor};
-      }
 
-      & > svg > path {
-        fill: ${hoverColor};
+        & > svg > path {
+          fill: ${hoverColor};
+        }
       }
     }
   `}

@@ -2,6 +2,12 @@ import { ROUTES } from '@/constants/route';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import * as Styled from './ArticlePreview..styled';
 
+export const LATEST_COUNT = 3;
+
+export interface IsLatestType {
+  isLatest: boolean;
+}
+
 export interface ArticleType {
   title: string;
   slug: string;
@@ -22,11 +28,11 @@ export interface ProjectType {
 }
 
 interface ArticlePreviewMdProps {
-  article: ArticleType | ProjectType;
+  article: (ArticleType & IsLatestType) | (ProjectType & IsLatestType);
 }
 
 const ArticlePreview = ({ article }: ArticlePreviewMdProps) => {
-  const { tag, createdAt, slug, thumbnail, title, description } = article;
+  const { tag, createdAt, slug, thumbnail, title, description, isLatest } = article;
 
   const linkPrefix = !description ? ROUTES.PROJECTS : ROUTES.ARTICLE;
 
@@ -37,7 +43,7 @@ const ArticlePreview = ({ article }: ArticlePreviewMdProps) => {
           <Styled.ContentWrapper>
             <Styled.Heading>{title}</Styled.Heading>
             <Styled.TagList>
-              <Styled.Latest>최신</Styled.Latest>
+              {isLatest && <Styled.Latest>최신</Styled.Latest>}
               <Styled.Tag>{tag}</Styled.Tag>
             </Styled.TagList>
             <Styled.CreateAt>{createdAt}</Styled.CreateAt>
