@@ -25,6 +25,7 @@ export interface ProjectType {
   tag: string;
   thumbnail: { gatsbyImageData: IGatsbyImageData };
   createdAt: string;
+  contentImages: Array<{ gatsbyImageData: IGatsbyImageData }>;
 }
 
 interface ArticlePreviewMdProps {
